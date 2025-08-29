@@ -82,7 +82,15 @@ class Apartment(House):
 def main():
     print("===HOUSE CLASS DEMOSTRATION===\n")
     
-    #create basic
+    #creating basic house
+    house1 = House("109 LarryLane", 3600, 5, 7, 700000)
+    print("A basic house: ")
+    print(house1.get_house_info())
+    
+    #Creating an apartment
+    apartment = Apartment("097 Hariza Hry", 1100, 2, 2, 40000)
+    print("\n Apartment:")
+    print()
    
         
         
