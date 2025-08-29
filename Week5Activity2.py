@@ -38,11 +38,13 @@ if __name__== "__main__":
     my_car.move()
     my_boat.move()
     my_plane.move()
+    my_wheel.move()
     
     #Using a common function to call the move() method
     print("\nCalling move() via a common function")
     make_it_move(my_car)
     make_it_move(my_plane)
     make_it_move(my_boat)
+    make_it_move(my_wheel)
         
         
