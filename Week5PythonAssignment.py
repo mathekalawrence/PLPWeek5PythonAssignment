@@ -39,9 +39,11 @@ class House:
         Status: {status}
         Price per sqft: ${self.calculate_price_per_sqft():.2f}   
     """
-    def__str__(self):
-    """String representation of the house"""
-       return f"House at {self.address} = ${self.price:,.2f}"
+    
+    #def__str__(self):
+    #"""String representation of the house"""
+     #  return f"House at {self.address} = ${self.price:,.2f}"
+       
    
    #Inheritance/ specailized house types
 class Apartment(House):
@@ -59,7 +61,7 @@ class Apartment(House):
             floor_number (_type_): _description_
             has_doorman (bool): _description_
         """
-        
+      
         super().__init__(address, size_square_feet, num_bedrooms, num_bathrooms, price)
         self.floor_number = floor_number
         self.has_doorman = has_doorman
@@ -90,7 +92,10 @@ def main():
     #Creating an apartment
     apartment = Apartment("097 Hariza Hry", 1100, 2, 2, 40000)
     print("\n Apartment:")
-    print()
+    print(apartment.get_house_info())
+    
+    if __name__ == "__main__":
+        main()
    
         
         
