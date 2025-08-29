@@ -28,4 +28,10 @@ class House:
         
     def get_house_info(self):
         """Return full information"""
+        status = "Sold" if self.is_sold else "Available"
+        return f"""
+        Address: {self.address}
+        Size: {self.size_square_feet} sqft
+        Color: {self.color}
+        Bedrooms: {self}
         
