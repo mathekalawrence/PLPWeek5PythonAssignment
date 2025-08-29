@@ -19,5 +19,11 @@ class Plane:
 #A function that takes a vehicle object and calls its move() method
 def make_it_move(vehicle):
     vehicle.move()
+    
+if __name__== "__main__":
+    #Creating instances of each class
+    my_car = Car()
+    my_plane = Plane()
+    my_boat = Boat()
         
         
