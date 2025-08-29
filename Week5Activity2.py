@@ -16,6 +16,10 @@ class Plane:
     def move(self):
         print("Flying")
         
+class Wheel:
+    def move(self):
+        print("Rolling")
+        
 #A function that takes a vehicle object and calls its move() method
 def make_it_move(vehicle):
     vehicle.move()
@@ -25,6 +29,7 @@ if __name__== "__main__":
     my_car = Car()
     my_plane = Plane()
     my_boat = Boat()
+    my_wheel = Wheel()
     
     print("Illustrating polymorphism:")
     
@@ -33,5 +38,11 @@ if __name__== "__main__":
     my_car.move()
     my_boat.move()
     my_plane.move()
+    
+    #Using a common function to call the move() method
+    print("\nCalling move() via a common function")
+    make_it_move(my_car)
+    make_it_move(my_plane)
+    make_it_move(my_boat)
         
         
