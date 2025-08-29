@@ -25,5 +25,13 @@ if __name__== "__main__":
     my_car = Car()
     my_plane = Plane()
     my_boat = Boat()
+    
+    print("Illustrating polymorphism:")
+    
+    #Calling the move() directly on each object
+    print("\n Calling move() directly:")
+    my_car.move()
+    my_boat.move()
+    my_plane.move()
         
         
