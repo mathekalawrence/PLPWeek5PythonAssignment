@@ -33,5 +33,57 @@ class House:
         Address: {self.address}
         Size: {self.size_square_feet} sqft
         Color: {self.color}
-        Bedrooms: {self}
+        Bedrooms: {self.num_bedrooms}
+        Bathrooms: {self.num_bashrooms}
+        Price: ${self.price:,.2f}
+        Status: {status}
+        Price per sqft: ${self.calculate_price_per_sqft():.2f}   
+    """
+    def__str__(self):
+    """String representation of the house"""
+       return f"House at {self.address} = ${self.price:,.2f}"
+   
+   #Inheritance/ specailized house types
+class Apartment(House):
+    def __init__(self, address, size_square_feet, num_bedrooms, num_bathrooms, price, floor_number, has_doorman):
+        """    Constructor for apartment with additional attributes
+        
+        _summary_
+
+        Args:
+            address (_type_): _description_
+            size_square_feet (_type_): _description_
+            num_bedrooms (_type_): _description_
+            num_bathrooms (_type_): _description_
+            price (_type_): _description_
+            floor_number (_type_): _description_
+            has_doorman (bool): _description_
+        """
+        
+        super().__init__(address, size_square_feet, num_bedrooms, num_bathrooms, price)
+        self.floor_number = floor_number
+        self.has_doorman = has_doorman
+        self.monthly_maintenance = 300 #Encapsulated attribute
+    
+    #Encapsulation using getters and setters
+    def get_maintenance_fee(self):
+        return self.monthly_maintenance
+    
+    def get_house_info(self): #Method overriding/polymorphism
+        base_info = super().get_house_info()
+        doorman = "Yes" if self.has_doorman else "No"
+        return base_info + f"""
+        Floor: {self.floor_number}
+        Doorman: {doorman}
+        Monthly Maintenance: ${self.monthly_maintenance}
+        Estimated Monthly cost: ${self.calculate_monthly_costs():.2f}
+        """
+#Demonstration of the classes
+def main():
+    print("===HOUSE CLASS DEMOSTRATION===\n")
+    
+    #create basic
+   
+        
+        
         
